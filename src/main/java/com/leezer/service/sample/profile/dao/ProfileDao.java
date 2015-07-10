@@ -34,7 +34,7 @@ public class ProfileDao {
 
     public void updateProfile(long id, Profile profile){
         profile.setId(id);
-        profileRepository.save(profile); //TODO be sure to test this
+        profileRepository.save(profile);
     }
 
     public List<Profile> getAllProfiles() {
