@@ -38,9 +38,9 @@ public class ProfileTestIT{
     @Test
     public void givenValidProfile_onUpdate_profileCanBeRetrievedAndContainsNewValues(){
         final String location = createProfileAndGetLocation();
-        final String newProfile = PROFILE.replace("@gmail.com", "@paypal.com");
+        final String newProfile = PROFILE.replace("@gmail.com", "@yahoo.com");
         given().contentType(ContentType.JSON).body(newProfile).when().put(location).then().statusCode(204);
-        given().get(location).then().statusCode(200).extract().asString().contains("@paypal.com");
+        given().get(location).then().statusCode(200).extract().asString().contains("@yahoo.com");
     }
 
     @Test
